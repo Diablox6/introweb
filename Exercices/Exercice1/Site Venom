@@ -1,0 +1,29 @@
+Payet Thomas / 30 août 2018
+<!DOCTYPE html>
+<html lang="fr">
+<head> <!-- En-tête du document qui n'est pas visible et qui permet de donner des informations au navigateur -->
+    <title>L'histoire de Venom</title>
+    <meta  charset="UTF-8">
+    <meta name="title" content="Venom">
+    <meta name="description" content="Découverte de  Venom">
+    <meta name="author" content="thomas PAYET">
+    <meta name="keywords" content="Marvel, symbiot, ...">
+    <meta name="robots" content="index,follow">
+</head>
+<body>
+<main></main>
+      <h1>Venom le symbiot</h1>
+      <h2>Déscription de venom</h2>
+      <p>Venom est un super-vilain de Comics appartenant à Marvel Comics. Il est apparu pour la première fois en mai 1984 dans le no 252 de The Amazing Spider-Man sous l'identité d'Eddie Brock. Le symbiote alien apparaît ensuite dans Secret Wars #8 en décembre 1984. Sous l'identité d'Angelo Fortunato, il apparaît dans Marvel Knights : Spider-Man 7: Venomous part 3 en décembre 2004.
+
+          Venom reste l'un des personnages les plus puissants et les plus populaires de la saga Spider-Man, tant par sa nature de version maléfique de Spider-Man que par son côté très controversé (du moins en tant qu'Eddie Brock). En fait, il a atteint une popularité qui rivalise avec celle du Bouffon Vert et du Docteur Octopus , l'ennemi principal attitré de Spider-Man. </p>
+      <h3>Son histoir</h3>
+      <p>Enfant, Edward « Eddie » Brock fut élevé dans une famille catholique conservatrice à San Francisco. Son père, Carl Brock, s'enferma dans une attitude froide et peu aimante à son égard, reprochant à son fils la mort de son épouse lors de l'accouchement. Eddie lutta constamment pour obtenir l'approbation et l'amour de son père mais, même après avoir brillamment réussi ses études, il ne reçut de mièvres encouragements de la part de Carl Brock. Bien qu'également exceptionnel dans les disciplines athlétiques, Eddie s'inscrivit à une école de journalisme après avoir lu un article sur le scandale du Watergate et le rôle de la presse dans l'affaire. Après avoir été diplômé, Eddie déménagea à New York et put obtenir rapidement un poste au Daily Globe. Il s'y révéla un journaliste talentueux, même si cette réussite professionnelle ne lui attira pas plus les faveurs de son père que ses précédents succès universitaires. Eddie épousa Anne Weying, qui avait été séduite par son intelligence et sa gentillesse. </p>
+      <h4>Vidéo de présentation</h4>
+      <p>https://www.youtube.com/watch?v=u9Mv98Gr5pY</p>
+
+
+<!-- CORPS DE LA PAGE  qui est visible  -->
+
+</body>
+</html>
