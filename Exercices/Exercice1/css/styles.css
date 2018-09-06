@@ -1,5 +1,6 @@
 body {
-    background: center no-repeat url("../images/world-of-warcraft-wow-wallpaper-android.jpg")
+    background: center no-repeat url("../images/world-of-warcraft-wow-wallpaper-android.jpg");
+    font-family:"Arial Black";
 }
 h1 {
     color:red;
@@ -23,6 +24,7 @@ li{
     color:orangered;
     font-weight: bolder;
 }
+
 .Caractéristique {
     color:darkviolet;
 }
