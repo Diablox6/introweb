@@ -1,3 +1,32 @@
 body {
     background: center no-repeat url("../images/world-of-warcraft-wow-wallpaper-android.jpg")
 }
+h1 {
+    color:red;
+    border: 1px solid black;
+    text-align: center;
+}
+
+h2,h3 {
+    text-decoration: underline overline red;
+
+}
+
+p {
+    font-weight: bold;
+    color:darkblue;
+
+}
+li{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color:orangered;
+    font-weight: bolder;
+}
+.Caractéristique {
+    color:darkviolet;
+}
+#jeu {
+    text-transform: uppercase;
+    color: darkred;
+}
