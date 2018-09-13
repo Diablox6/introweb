@@ -11,9 +11,25 @@ h1{
 
 	border: 2px solid darkblue;
 	padding-left: 10px;
+    float: left;
+    width: 20%;
+    padding-left: 2px;
 }
 .box2 {
   border: 2px solid red;
+    float: left;
+    width: 70%;
+    padding-left: 2%;
+}
+p{
+    float: left;
+}
+img{
+    width: 72%;
+    height: 390px;
+    float: left;
+    text-align: center;
+    border: 2px solid black;
 }
 
 
