@@ -1,6 +1,6 @@
 ﻿main{
 	margin:0 auto; /* permet de centrer la page*/
-	width: 55%;  
+	width: 55%;
 }
 
 
@@ -10,6 +10,7 @@ nav
 	border : 1px solid blue ;
 	display: inline-block;
 	vertical-align: top;
+
 }
 section {
 	border: 1px solid blue;
@@ -26,7 +27,21 @@ h1,h2{
 footer{
 	margin-left: 1%;
 	text-align: center;
+	clear: left;
 }
-
+#section1{
+	text-align: center;
+	width: 40%;
+	padding-top: 2px;
+	margin-right:3%;
+}
+#section2 {
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+}
+.image{
+	padding-left: 36%;
+}
 
 

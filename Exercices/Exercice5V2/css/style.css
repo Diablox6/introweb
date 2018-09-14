@@ -16,12 +16,13 @@ section {
 	border: 1px solid blue;
 	width: 55%;
 	position: relative;
-	left: 105px;
+	left: 55px;
 	display: inline-block;
 	text-align: center;
 }
 h1,h2{
 	text-align: center;
+	margin-top: 0%;
 }
 footer{
 	margin-left: 1%;
@@ -30,7 +31,7 @@ footer{
 }
 #section1{
 	text-align: center;
-	width: 33%;
+	width: 40%;
 	padding-top: 2px;
 	margin-right:3%;
 }
