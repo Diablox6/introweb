@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>FORMULAIRE</title>
+	<meta  charset="UTF-8">
+	<meta name="title" content="Titre de la page">
+	<meta name="description" content="description de la page">
+	<meta name="author" content="prenon NOM">
+	<meta name="keywords" content="mots-clé1, mots-clé2, ...">
+	<meta name="robots" content="index,follow">
+	<link rel="stylesheet " href ="CSS/Style.css"/>
+</head>
+<body>
+	<div class="form-style">
+		<div class="Entete">Entrez les informations du membre</div>
+		<div>
+			<label for="nom"><strong>Nom*</strong></label>
+			<input name="entrerNom" type="text" size="40" required autofocus>
+
+		</div>
+		<div>
+			<label for="Prenom"><strong>Prénom*</strong></label>
+			<input name="entrerPrenom" type="text" size="40" required >
+		</div>
+		<div>
+			<label for="adresse"><strong>Adresse</strong></label>
+			<input name="giveAdresse" type="text" size="40" placeholder="999 rue" required>
+		</div>
+		<div>
+			<label for="ville"><strong>Ville</strong></label>
+			<input name="entrerVille" type="text" size="40" required>
+		</div>
+		<div>
+			<label for="phone"><strong>Téléphone*</strong></label>
+			<input name="entrerPhone" type="text" size="20" placeholder="999 999-9999" required>
+		</div>
+		<div>
+			<label for="inscription>"><strong>Date d'inscription*</strong></label>
+			<input name="entrerInscription" type="text" size="20" placeholder="jj/ms/aaaa" required>
+		</div>
+		<div>
+			<label for="fin"><strong>Date de fin</strong></label>
+			<input name="entrerFin" type="date" size="20" placeholder="aaaa/mm-jj" required>
+		</div>
+		<div>
+			<label for="sexe"><strong>Sexe</strong></label>
+			<input name="choisirSexe" type="radio" checked><label class="s" for="masculin">Masculin</label>
+			<input name="choisirSexe" type="radio"><label class="s" for="feminin">Feminin</label>
+		</div>
+		<div>
+			<label for="choix"><strong>Choix</strong></label>
+			<select name="maListe">
+				<option value="prduit1">Americain Express</option>
+				<option value="prduit1">Visa</option>
+			</select>
+		</div>
+
+		<!-- formulaire ici -->
+	</div>
+</body>
+</html>
