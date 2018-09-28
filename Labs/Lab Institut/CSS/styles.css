@@ -175,4 +175,21 @@ label {
 span{
 	color: red;
 }
+tr{
+	text-align: left;
+	border: 5px solid red;
+}
+table{
+	text-align: center;
+	margin-left: 150px;
+
+
+}
+th{
+	border: 5px solid red;
+}
+td{
+	border: 5px solid red;
+}
+
 
