@@ -27,19 +27,61 @@ function btnAjouter_onclick()
 
 function btnTrouverMoy_onclick()
 {
+   res = calculerMoy();
+}
+
+function calculerMoy()
+{
     var moyen = 0;
     var tot = 0;
+    var res;
     for (var  i = 0; i < TabPoints.length; i++)
     {
         tot += TabPoints[i];
     }
     moyen = tot/4;
-    document.getElementById("lblReponse").innerHTML= ("Reponse " + moyen);
+    res = document.getElementById("lblReponse").innerHTML= ("Reponse " + moyen);
+
+    return res;
 }
+
+
+function btnMeilleure_onclick()
+{
+    result = Meilleure();
+}
+
+function Meilleure()
+{
+    var result;
+    var max = TabPoints[0];
+    var nomMeilleure = TabJoueur[0];
+    for(var i = 0; i < TabPoints.length; i ++)
+    {
+        if(max < TabPoints[i])
+        {
+            max = TabPoints[i];
+            nomMeilleure = TabJoueur[i];
+        }
+
+    }
+    result = document.getElementById("lblReponse").innerHTML= "Reponse " + max + " Joueur " + nomMeilleure;
+    return result;
+}
+
+
+
+
 
 function btnTrouverPire_onclick()
 
 {
+    resultat = Pire();
+}
+
+function Pire()
+{
+    var resultat;
     var min = TabPoints[0];
     var nomPire = TabJoueur[0];
     for(var i = 0; i < TabPoints.length; i ++)
@@ -51,8 +93,11 @@ function btnTrouverPire_onclick()
         }
 
     }
-    document.getElementById("lblReponse").innerHTML= "Reponse " + min + " Joueur " + nomPire;
+   resultat = document.getElementById("lblReponse").innerHTML= "Reponse " + min + " Joueur " + nomPire;
+    return resultat;
 }
+
+
 
 function btnRechercher_onclick()
 {

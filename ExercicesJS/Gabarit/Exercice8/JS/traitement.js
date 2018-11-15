@@ -107,3 +107,7 @@ function affichage()
 {
     document.getElementById("lblMessage").innerHTML = "Le montant sera de " + Montant + " et votre Veterinaire sera " + Veterinaire + " pour la garde de votre " + Animaux ;
 }
+
+
+
+
