@@ -61,15 +61,15 @@ function valideExist(nomId)
 
 function validChampsOblig()
 {
-    var valide = false;
+    var valide = true;
+    var tabNomId = new Array("txtNbre1","txtNbre2","txtOperateur");
 
-    if ((valideExist("txtNbre1") === true) && (valideExist("txtNbre2") === true) && (valideExist("txtOperateur") === true))
+    for (i = 0; i < tabNomId.length; i ++)
     {
-        valide = true;
-    }
-    else
-    {
-        valide = false;
+        if (valideExist(tabNomId[i])=== false)
+        {
+            valide = false;
+        }
     }
     return valide;
 }
