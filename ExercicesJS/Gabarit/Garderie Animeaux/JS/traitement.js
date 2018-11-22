@@ -6,6 +6,7 @@ function btnCalculer_onclick()
 {
     saisirInfos();
     calculerPrix();
+    valide = validChampsOblig();
 }
 function calculerPrix()
  {
@@ -109,5 +110,35 @@ function affichage()
 }
 
 
+function valideExist(nomId)
+{
+    var valide = true;
+    if (document.getElementById(nomId).value === "")
+    {
+        valide = false;
+        document.getElementById(nomId).style.backgroundColor = "red";
+    }
+    else
+    {
+        valide = true;
+        document.getElementById(nomId).style.backgroundColor = "white";
+    }
+    return valide;
+}
+
+function validChampsOblig()
+{
+    var valide = true;
+    var tabNomId = new Array("txtNbreJours","numClient","nomClient");
+
+    for (i = 0; i < tabNomId.length; i ++)
+    {
+        if (valideExist(tabNomId[i])=== false)
+        {
+            valide = false;
+        }
+    }
+    return valide;
+}
 
 
