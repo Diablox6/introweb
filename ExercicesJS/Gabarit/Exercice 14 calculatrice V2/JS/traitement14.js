@@ -1,8 +1,13 @@
 function btnCalculer_onclick()
 { 
-    if(validChampsOblig()===true) {
-        resultat = traiterInfos();
+    if(validChampsOblig()===true)
+    {
+        if (valideFormats()=== true)
+        {
+            resultat = traiterInfos();
+        }
     }
+
 }
 
 
@@ -74,8 +79,37 @@ function validChampsOblig()
     return valide;
 }
 
+function valideFormats()
+{
+    var valide = true;
+    if (valideNo(document.getElementById("txtNbre1").value) == false)
+    {
+        valide = false;
+        document.getElementById("txtNbre1").style.backgroundColor = "red";
+    }
+    if (valideNo(document.getElementById("txtNbre2").value) == false)
+    {
+        valide = false;
+        document.getElementById("txtNbre2").style.backgroundColor = "red";
+    }
+    if (valideOperateur(document.getElementById("txtOperateur").value) == false)
+    {
+        valide = false;
+        document.getElementById("txtOperateur").style.backgroundColor = "red";
+    }
+    return valide;
+}
 
 
+function valideNo(chaine)
+{
+    return /^[0-9]+$/.test(chaine);
+}
+
+function valideOperateur(chaine)
+{
+    return /^(\+|\-|\*|\/)?$/.test(chaine);
+}
 
 
 
