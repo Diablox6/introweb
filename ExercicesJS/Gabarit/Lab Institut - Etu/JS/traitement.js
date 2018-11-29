@@ -1,10 +1,21 @@
-function frmMembre_onclick()
+function frmMembre_onsubmit()
 {
-    if (valideChampsOblig()=== true)
+    var valide = false;
+    if (valideChampsOblig() === true)
     {
-        afficherTarif();
+        if (valideFormat() === true)
+        {
+            afficherTarif();
+            valide = true;
+        }
     }
+    else
+    {
+        document.getElementById("lblMessageErreur").innerHTML = "Les champs avec * sont obligatoire ";
+    }
+    return valide;
 }
+
 
 function afficherTarif()
 {
@@ -23,42 +34,104 @@ function afficherTarif()
             resultat = 80;
             break;
     }
-    document.getElementById("res").innerHTML = "Le resulta sera " + resultat;
+    document.getElementById("res").innerHTML = "Le resulta sera de " + resultat + " $";
 }
 
 function valideChampsOblig()
 {
     var valide = true;
 
-    if (document.getElementById("txtNom").value === "")
+    var tabValide = new Array("txtNom","txtPrenom","txtAdresse","txtVille","txtTel");
+    for (i = 0; i < tabValide.length; i ++)
     {
-        valide = false;
-        document.getElementById("txtNom").style.borderColor = "Red";
+        if (validExist(tabValide[i])=== false)
+        {
+            valide = false;
+        }
     }
+    return valide;
+}
 
-    if (document.getElementById("txtPrenom").value === "")
+function validExist(nomID)
+{
+    var valide = true;
+    if (document.getElementById(nomID).value === "")
     {
         valide = false;
-        document.getElementById("txtPrenom").style.borderColor = "Red";
+        document.getElementById(nomID).style.borderColor = "red";
     }
-
-    if (document.getElementById("txtAdresse").value === "")
+    else
     {
-        valide = false;
-        document.getElementById("txtAdresse").style.borderColor = "Red";
+        valide = true;
+        document.getElementById(nomID).style.borderColor = "white";
     }
+    return valide;
+}
 
-    if (document.getElementById("txtVille").value === "")
+
+function valideFormat()
+{
+    var valide = true;
+
+    if (valideNom(document.getElementById("txtNom").value) === false)
     {
         valide = false;
-        document.getElementById("txtVille").style.borderColor = "Red";
+        document.getElementById("txtNom").style.borderColor = "red";
     }
-
-    if (document.getElementById("tel").value === "")
+    if (valideNom(document.getElementById("txtPrenom").value) === false)
     {
         valide = false;
-        document.getElementById("tel").style.borderColor = "Red";
+        document.getElementById("txtPrenom").style.borderColor = "red";
+    }
+    if (valideNom(document.getElementById("txtVille").value) === false)
+    {
+        valide = false;
+        document.getElementById("txtVille").style.borderColor = "red";
+    }
+    if (valideNum(document.getElementById("txtTel").value) === false)
+    {
+        valide = false;
+        document.getElementById("txtTel").style.borderColor = "red";
+    }
+    if ((validePost(document.getElementById("txtCodePostal").value) === false) && (document.getElementById("txtCodePostal").value !== ""))
+    {
+        valide = false;
+        document.getElementById("txtCodePostal").style.borderColor = "red";
+    }
+    else
+    {
+        document.getElementById("txtCodePostal").style.borderColor = "white";
+    }
+    if ((validePerm(document.getElementById("txtCodePerm").value) === false) && (document.getElementById("txtCodePerm").value !== ""))
+    {
+        valide = false;
+        document.getElementById("txtCodePerm").style.borderColor = "red";
+    }
+    else
+    {
+        document.getElementById("txtCodePerm").style.borderColor = "white";
     }
 
     return valide;
+}
+
+
+function valideNom(chaine)
+{
+    return /^[A-Z]{1}[a-z]+|[\-?[A-Z|a-z]]+$/.test(chaine)
+}
+
+function valideNum(chaine)
+{
+    return /^([0-9]{3}-{1}[0-9]{3}-{1}[0-9]{4}){1}| (\([0-9]\) [0-9]{3}-{1}[0-9]{4}){1}$/.test(chaine)
+}
+
+function validePost(chaine)
+{
+    return /^[A-z][0-9][A-z] [0-9][A-z][0-9]$/.test(chaine)
+}
+
+function validePerm(chaine)
+{
+    return /^[A-z]{4}(\d{8})$/.test(chaine)
 }
